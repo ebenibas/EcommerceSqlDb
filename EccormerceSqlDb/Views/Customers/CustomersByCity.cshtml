@@ -1,0 +1,23 @@
+﻿@model List<EccormerceSqlDb.Customer>
+@{
+    ViewBag.Title = "CustomersInCity";
+}
+
+<h2>CustomersInCity</h2>
+<ul>
+    @if (Model != null)
+    {
+        foreach (var customer in Model)
+        {
+    <li>@Html.DisplayFor(modelItem => customer.FirstName)</li>
+        }
+    }
+
+</ul>
+@using (Html.BeginForm())
+{
+    @Html.DropDownList("City","choose city")
+    <br/>
+    <input type="submit" value="Get results"/>
+}
+
