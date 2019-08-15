@@ -8,10 +8,12 @@
         <EntityTypeShape EntityType="EcommerceDbModel.Customer" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="EcommerceDbModel.Order" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="EcommerceDbModel.OrderProduct" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="EcommerceDbModel.Product" Width="1.5" PointX="3" PointY="5.125" IsExpanded="true" />
         <AssociationConnector Association="EcommerceDbModel.FK_Order_Customer" ManuallyRouted="false" />
         <AssociationConnector Association="EcommerceDbModel.FK_OrderProduct_Order" ManuallyRouted="false" />
-        <AssociationConnector Association="EcommerceDbModel.FK_OrderProduct_Product" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="EcommerceDbModel.Category" Width="1.5" PointX="0.75" PointY="5.625" />
+        <EntityTypeShape EntityType="EcommerceDbModel.Product" Width="1.5" PointX="3" PointY="5.25" />
+        <AssociationConnector Association="EcommerceDbModel.FK_Product_Category" />
+        <AssociationConnector Association="EcommerceDbModel.FK_OrderProduct_Product" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

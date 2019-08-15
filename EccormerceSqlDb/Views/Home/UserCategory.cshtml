@@ -1,0 +1,15 @@
+﻿@model List<EccormerceSqlDb.Controllers.HomeController.productWithCategory>
+@{
+    ViewBag.Title = "UserCategory";
+}
+
+<h2>UserCategory</h2>
+<ul>
+    @foreach (var item in Model)
+    {
+        <li>
+            @Html.ActionLink(item.ProductName, "DetailsOfProducts", new { Id = item.ProductId }, null)
+            is in category @item.CategoryName
+        </li>
+    }
+</ul>
